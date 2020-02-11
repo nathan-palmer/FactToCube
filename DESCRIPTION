@@ -1,0 +1,8 @@
+Package: FactToCube
+Title: Convert Fact Tables to Analytic Cubes (Matrices)
+Version: 0.0.0.9000
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: This package contains a set of functions that transform aggregate fact tables to analytic data cubes.
+Depends: R (>= 3.2.2)
+License: What license is it under?
+LazyData: true
