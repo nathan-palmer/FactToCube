@@ -67,13 +67,19 @@ SEXP factToDoubleMatrix(
 
 	int* rowIndices = INTEGER(rowIndices_sxp);
 	int* colIndices = INTEGER(colIndices_sxp);
-	double* values = REAL(values_sxp);
+	
+	SEXP valuesReal = AS_NUMERIC(values_sxp);
+	double* values = REAL(valuesReal);
+	
 	int nEntries = *INTEGER(nEntries_sxp);
+	
 	SEXP outMatrixReal = AS_NUMERIC(outMatrix_sxp);
 	PROTECT(outMatrixReal); nprot++;
 	double* outMatrix = REAL(outMatrixReal);
+	
 	int outNRows = *INTEGER(outNRows_sxp);
 	int outNColumns = *INTEGER(outNColumns_sxp);
+	
 	int nThreads = *INTEGER(nThreads_sxp);
 
 	//printf("number of entries: %d\n", nEntries);
